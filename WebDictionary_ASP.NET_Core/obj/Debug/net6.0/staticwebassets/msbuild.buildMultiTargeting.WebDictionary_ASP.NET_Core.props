@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WebDictionary_ASP.NET_Core.props" />
+</Project>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDictionary_ASP.NET_Core", "WebDictionary_ASP.NET_Core\WebDictionary_ASP.NET_Core.csproj", "{0878962A-741B-4D53-BFD6-53188CBD8D62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0878962A-741B-4D53-BFD6-53188CBD8D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0878962A-741B-4D53-BFD6-53188CBD8D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0878962A-741B-4D53-BFD6-53188CBD8D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0878962A-741B-4D53-BFD6-53188CBD8D62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0800621-1776-4133-A8AA-0973A94B992D}
+	EndGlobalSection
+EndGlobal
