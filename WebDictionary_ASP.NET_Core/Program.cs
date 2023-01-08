@@ -20,17 +20,10 @@ namespace WebDictionary_ASP.NET_Core
             var app = builder.Build();
 
             //корневая страница
-            app.Map("/111", async (ctx) =>
+            app.UseStaticFiles();
+            app.Map("/", async (ctx) =>
             {
-                ctx.Response.ContentType = "text/html; charset=utf-8";
-                await ctx.Response.WriteAsync("<h2>Добро пожаловать в<i> WEB-Словарь</i>!</h2> " +
-                    "<h3><p>Инструкция по применению:</p>" +
-                    "<p style='background-color: #E1F896'>/words - Отобразить все элементы словаря</p>" +
-                    "<p style='background-color: #E1F896'>/words/add?en=table&ru=стол - Добавить новую пару</p>" +
-                    "<p style='background-color: #E1F896'>/words/get?en=table - Найти перевод для заданного слова</p>" +
-                    "<p style='background-color: #E1F896'>/words/delete?en=table - Удалить слово и его перевод из словаря</p>" +
-                    "<p style='background-color: #E1F896'>/words/test - Тест по словам НЕ РЕАЛИЗОВАНО</p>" +
-                    "<p style='background-color: #E1F896'>/ - Эта страница</p></h3>");
+                ctx.Response.Redirect("/startup.html");
             });
 
             //вывод всего словаря 
@@ -38,11 +31,12 @@ namespace WebDictionary_ASP.NET_Core
             {               
                 ctx.Response.ContentType = "text/html; charset=utf-8";
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine("<u><h5 style='color: #0008ff'>СЛОВАРЬ.</h5></u>");
+                sb.AppendLine("<u><h2 style='color: #0008ff'>СЛОВАРЬ.</h2></u>");
                 foreach (var word in words)
                 {
-                    sb.AppendLine("<p style='background-color: #E1F896'>" + word.Key + " --- " + word.Value+"</p>");
+                    sb.AppendLine("<p style='background-color: #E1F896'>" + word.Key + " --- " + word.Value+"</p>");                 
                 }
+                sb.AppendLine("<p>&nbsp;<a href=\"/\"><span style=\"background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;\">В ГЛАВНОЕ МЕНЮ</span></a>&nbsp;</p>");
                 await ctx.Response.WriteAsync(sb.ToString());
             });
 
@@ -64,7 +58,7 @@ namespace WebDictionary_ASP.NET_Core
                 {
                     words.Add(en, ru);
                     await ctx.Response.WriteAsync("<h2 style='background-color: green'>Пара слов '" + en + "' --- '"+ru+"' успешно добавлена в словарь.</h2> " +
-                       "<a href = '/words'>---> Посмотреть актуальный словарь <---</a>");
+                       "<p>&nbsp;<a href=\"/words\"><span style=\"background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;\">В СЛОВАРЬ</span></a>&nbsp;</p>");
                 }   
             });
 
@@ -84,7 +78,7 @@ namespace WebDictionary_ASP.NET_Core
                 //вывод перевода
                 {         
                     await ctx.Response.WriteAsync("<h2 style='background-color: green'>Перевод слова '" + en + "' --- '" + words[en] + "'. Перевод выполнен успешно.</h2> " +
-                       "<a href = '/words'>---> Посмотреть актуальный словарь <---</a>");
+                       "<p>&nbsp;<a href=\"/words\"><span style=\"background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;\">В СЛОВАРЬ</span></a>&nbsp;</p>");
                 }
             });
 
@@ -105,7 +99,7 @@ namespace WebDictionary_ASP.NET_Core
                 {
                     words.Remove(en);
                     await ctx.Response.WriteAsync("<h2 style='background-color: green'> Слово '" + en + "' и его перевод успешно удалены из словаря.</h2> " +
-                       "<a href = '/words'>---> Посмотреть актуальный словарь <---</a>");
+                       "<p>&nbsp;<a href=\"/words\"><span style=\"background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;\">В СЛОВАРЬ</span></a>&nbsp;</p>");
                 }
             });
 
@@ -159,7 +153,8 @@ namespace WebDictionary_ASP.NET_Core
                     sb.AppendLine("<h2> Итого: </h2>");
                     sb.AppendLine($"<p style='background-color: green'>Верных ответов: {done}</p> ");
                     sb.AppendLine($"<p style='background-color: red'>Неверных ответов: {fail}</p> ");
-                    sb.AppendLine("<a href = '/words'>---> Посмотреть актуальный словарь <---</a>");
+                    sb.AppendLine("<p>&nbsp;<a href=\"/words\"><span style=\"background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;\">В СЛОВАРЬ</span></a>&nbsp;</p>");
+                    sb.AppendLine("<p>&nbsp;<a href=\"/\"><span style=\"background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;\">В ГЛАВНОЕ МЕНЮ</span></a>&nbsp;</p>");
                 }
                 await ctx.Response.WriteAsync(sb.ToString());
             });
@@ -167,5 +162,4 @@ namespace WebDictionary_ASP.NET_Core
             app.Run();
         }
     }
-
 }

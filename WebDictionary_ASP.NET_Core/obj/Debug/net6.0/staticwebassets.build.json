@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "avWIHlSVOeZj1jQehgnQ5t1pqMfcP0MHc3GCy1UaMcU=",
+  "Hash": "qnHPtbWgOhGdwm36VROOStjLi7DHmTftzBhzq7qF7bM=",
   "Source": "WebDictionary_ASP.NET_Core",
   "BasePath": "_content/WebDictionary_ASP.NET_Core",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebDictionary_ASP.NET_Core\\wwwroot",
+      "Source": "WebDictionary_ASP.NET_Core",
+      "ContentRoot": "C:\\Users\\pjslo\\Documents\\GitHub\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\wwwroot\\",
+      "BasePath": "_content/WebDictionary_ASP.NET_Core",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\pjslo\\Documents\\GitHub\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\wwwroot\\startup.html",
+      "SourceId": "WebDictionary_ASP.NET_Core",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pjslo\\Documents\\GitHub\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\wwwroot\\",
+      "BasePath": "_content/WebDictionary_ASP.NET_Core",
+      "RelativePath": "startup.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\startup.html"
+    }
+  ]
 }

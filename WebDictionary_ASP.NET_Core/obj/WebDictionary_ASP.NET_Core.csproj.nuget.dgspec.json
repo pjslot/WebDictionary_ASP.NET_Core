@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pjslo\\source\\repos\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core.csproj": {}
+    "C:\\Users\\pjslo\\Documents\\GitHub\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pjslo\\source\\repos\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core.csproj": {
+    "C:\\Users\\pjslo\\Documents\\GitHub\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pjslo\\source\\repos\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core.csproj",
+        "projectUniqueName": "C:\\Users\\pjslo\\Documents\\GitHub\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core.csproj",
         "projectName": "WebDictionary_ASP.NET_Core",
-        "projectPath": "C:\\Users\\pjslo\\source\\repos\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core.csproj",
+        "projectPath": "C:\\Users\\pjslo\\Documents\\GitHub\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core.csproj",
         "packagesPath": "C:\\Users\\pjslo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pjslo\\source\\repos\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\obj\\",
+        "outputPath": "C:\\Users\\pjslo\\Documents\\GitHub\\WebDictionary_ASP.NET_Core\\WebDictionary_ASP.NET_Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\pjslo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
